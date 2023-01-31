@@ -23,7 +23,7 @@ jobs:
           sudo apt update
           sudo apt install ninja-build libeigen3-dev
       - name: Install opencv
-        uses: cvpkg/opencv-action@v0.1
+        uses: cvpkg/opencv-action@main
       - name: run cmake
         run: |
           mkdir build
