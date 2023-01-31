@@ -20,7 +20,7 @@ jobs:
         uses: SonarSource/sonarcloud-github-c-cpp@v1
       - name: Install deps
         run: |
-          sudo apt install ninja-build
+          sudo apt install ninja-build libeigen3-dev
       - name: run cmake
         run: |
           mkdir build
