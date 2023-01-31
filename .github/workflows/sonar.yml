@@ -18,12 +18,13 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v1
-      - uses: Dovyski/setup-opencv-action@v1.1
-        with:
-          opencv-version: '4.0.0'
       - name: Install deps
         run: |
+          sudo apt update
           sudo apt install ninja-build libeigen3-dev
+      - uses: Dovyski/setup-opencv-action@v1.1
+        with:
+          opencv-version: '4.7.0'
       - name: run cmake
         run: |
           mkdir build
