@@ -21,9 +21,7 @@ jobs:
       - name: Install deps
         run: |
           sudo apt update
-          sudo apt install ninja-build libeigen3-dev
-      - name: Install opencv
-        uses: cvpkg/opencv-action@main
+          sudo apt install ninja-build libeigen3-dev libopencv-dev
       - name: run cmake
         run: |
           mkdir build
